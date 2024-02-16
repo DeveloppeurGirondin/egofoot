@@ -22,7 +22,7 @@
     "jwtSecretKey": "NDA2OWQ3NWQ5ZWQyYzg0YTNiYjBiMzkwMDMzZDUwODE2MTlkMWVjZDYzMjY3NDQ1YmUwNzViYjE3ZDBmZTgxMDliZGY5NDA1NmYyNGI3OWQxMWZhODFhMDExYWRiNWZmMzA1NTNjYTQ1OWI2YzQyNmRiZmYxYjRkZmQ4ZDU5MDU=",
     "languages": ["en", "fr", "es"],
     "messageBroker": false,
-    "nativeLanguage": "en",
+    "nativeLanguage": "fr",
     "packageFolder": "fr/egotech/egofoot",
     "packageName": "fr.egotech.egofoot",
     "prodDatabaseType": "mongodb",
