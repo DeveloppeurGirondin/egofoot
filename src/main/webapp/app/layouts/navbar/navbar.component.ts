@@ -27,7 +27,6 @@ export default class NavbarComponent implements OnInit {
   isNavbarCollapsed = true;
   languages = LANGUAGES;
   openAPIEnabled?: boolean;
-  version = '';
   account: Account | null = null;
   entitiesNavbarItems: NavbarItem[] = [];
 
@@ -38,11 +37,7 @@ export default class NavbarComponent implements OnInit {
     private accountService: AccountService,
     private profileService: ProfileService,
     private router: Router,
-  ) {
-    if (VERSION) {
-      this.version = VERSION.toLowerCase().startsWith('v') ? VERSION : `v${VERSION}`;
-    }
-  }
+  ) {}
 
   ngOnInit(): void {
     this.entitiesNavbarItems = EntityNavbarItems;

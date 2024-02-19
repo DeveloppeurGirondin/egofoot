@@ -17,11 +17,12 @@ h4 {
 /* Increase contrast of links to get 100% on Lighthouse Accessibility Audit. Override this color if you want to change the link color, or use a Bootswatch theme */
 a {
   color: #533f03;
-  font-weight: bold;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 a:hover {
-  color: #533f03;
+  color: #312601;
 }
 
 /* override hover color for dropdown-item forced by bootstrap to all a:not([href]):not([tabindex]) elements in _reboot.scss */
@@ -107,6 +108,7 @@ Generic styles
 }
 
 .footer {
+  margin-top: 20px;
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 
@@ -218,16 +220,6 @@ ui bootstrap tweaks
 /* ==========================================================================
 angular-cli removes postcss-rtl processed inline css, processed rules must be added here instead
 ========================================================================== */
-/* page-ribbon.component.scss */
-.ribbon {
-  left: -3.5em;
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
 /* navbar.component.scss */
 .navbar {
   ul.navbar-nav {
@@ -237,3 +229,43 @@ angular-cli removes postcss-rtl processed inline css, processed rules must be ad
   }
 }
 /* jhipster-needle-scss-add-main JHipster will add new css style */
+
+.bg-forest-green {
+  background-color: #228b22;
+  color: white;
+}
+
+.card-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  font-size: 1.25rem;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  font-size: 1rem;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.btn-primary {
+  color: #ffffff;
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+.btn:disabled,
+.btn.disabled,
+fieldset:disabled .btn {
+  color: #cccccc;
+}

@@ -1,8 +1,9 @@
 {
   "home": {
     "title": "Bienvenue, sur EgoFoot!",
-    "logged": {
-      "message": "Vous êtes connecté en tant que \"{{username}}\"."
+    "presentation": "EgoFoot est un jeu de gestion d'équipe de football. Vous pouvez créer votre propre équipe, acheter et vendre des joueurs, et participer à des matchs contre d'autres équipes. Vous pouvez également participer à des tournois et des ligues.",
+    "user": {
+      "connected": "C'est un plaisir de vous voir ici <b>{{username}}</b>."
     }
   }
 }

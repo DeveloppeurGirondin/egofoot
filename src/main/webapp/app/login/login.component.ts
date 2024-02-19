@@ -5,6 +5,7 @@ import { Router, RouterModule } from '@angular/router';
 import SharedModule from 'app/shared/shared.module';
 import { LoginService } from 'app/login/login.service';
 import { AccountService } from 'app/core/auth/account.service';
+import { StateStorageService } from '../core/auth/state-storage.service';
 
 @Component({
   selector: 'jhi-login',
@@ -27,6 +28,7 @@ export default class LoginComponent implements OnInit, AfterViewInit {
   constructor(
     private accountService: AccountService,
     private loginService: LoginService,
+    private stateStorageService: StateStorageService,
     private router: Router,
   ) {}
 
@@ -34,7 +36,7 @@ export default class LoginComponent implements OnInit, AfterViewInit {
     // if already authenticated then navigate to home page
     this.accountService.identity().subscribe(() => {
       if (this.accountService.isAuthenticated()) {
-        this.router.navigate(['']);
+        this.router.navigate(['user/dashboard']);
       }
     });
   }
@@ -44,6 +46,7 @@ export default class LoginComponent implements OnInit, AfterViewInit {
   }
 
   login(): void {
+    this.stateStorageService.storeUrl('user/dashboard');
     this.loginService.login(this.loginForm.getRawValue()).subscribe({
       next: () => {
         this.authenticationError = false;

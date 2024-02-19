@@ -1,29 +1,27 @@
-<div class="row">
-  <div class="col-md-2">
-    <img src="content/images/logo-egofoot.png" class="img-fluid" />
-  </div>
-
-  <div class="col-md-10">
-    <h1 class="display-4"><span jhiTranslate="home.title">Welcome at EgoFoot!</span></h1>
-
-    <div>
-      @if (account !== null && account) {
-        Salut {{ account.login }}!
-      } @else {
-        <div class="alert alert-warning">
-          <span jhiTranslate="global.messages.info.authenticated.prefix">If you want to </span>
-          <a class="alert-link" (click)="login()" jhiTranslate="global.messages.info.authenticated.link">sign in</a
-          ><span jhiTranslate="global.messages.info.authenticated.suffix"
-            >, you can try the default accounts:<br />- Administrator (login=&quot;admin&quot; and password=&quot;admin&quot;) <br />- User
-            (login=&quot;user&quot; and password=&quot;user&quot;).</span
-          >
+<div class="container">
+  <div class="card">
+    <div class="card-header bg-primary" jhiTranslate="home.title">Bienvenue sur EgoFoot!</div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-9 d-flex flex-column">
+          @if (account !== null && account) {
+            <p jhiTranslate="home.user.connected" [translateValues]="{ username: account.login }">
+              C'est un plaisir de vous revoir, {{ account.login }}
+            </p>
+          } @else {
+            <p jhiTranslate="home.presentation"></p>
+            <div class="mt-auto text-center">
+              <a class="btn btn-primary" (click)="login()" jhiTranslate="global.messages.info.authenticated.link"> sign in </a>
+              <a class="btn btn-secondary ms-2" routerLink="/account/register" jhiTranslate="global.messages.info.register.link"
+                >Register a new account</a
+              >
+            </div>
+          }
         </div>
-
-        <div class="alert alert-warning">
-          <span jhiTranslate="global.messages.info.register.noaccount">You don&apos;t have an account yet?</span>&nbsp;
-          <a class="alert-link" routerLink="/account/register" jhiTranslate="global.messages.info.register.link">Register a new account</a>
+        <div class="d-none d-md-block col-md-3">
+          <img src="content/images/home-img.jpg" class="img-fluid" />
         </div>
-      }
+      </div>
     </div>
   </div>
 </div>

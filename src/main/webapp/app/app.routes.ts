@@ -32,6 +32,10 @@ const routes: Routes = [
     loadChildren: () => import('./account/account.route'),
   },
   {
+    path: 'user',
+    loadChildren: () => import('./user/user.route'),
+  },
+  {
     path: 'login',
     component: LoginComponent,
     title: 'login.title',

@@ -47,12 +47,10 @@
     "messages": {
       "info": {
         "authenticated": {
-          "prefix": "Si vous voulez vous ",
-          "link": "connecter",
-          "suffix": ", vous pouvez utiliser les comptes par défaut : <br/> - Administrateur (nom d'utilisateur=\"admin\" et mot de passe =\"admin\") <br/> - Utilisateur (nom d'utilisateur=\"user\" et mot de passe =\"user\")."
+          "link": "Se connecter"
         },
         "register": {
-          "noaccount": "Vous n'avez pas encore de compte ?",
+          "noaccount": "Pas encore de compte ?",
           "link": "Créer un compte"
         }
       },
@@ -81,9 +79,6 @@
     },
     "field": {
       "id": "ID"
-    },
-    "ribbon": {
-      "dev": "Développement"
     },
     "item-count": "Affichage {{first}} - {{second}} de {{total}} items."
   },
